@@ -4,10 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Drill Get 🐐</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
-		<p class="preheader" id="index">Name</p>
+		<div class="preheader">
+			Drill <span id="index">X</span> of <span id="total">Y</span>
+		</div>
 		<h1 id="title">Drill Name</h1>
 	</header>
 	<figure></figure>
@@ -40,7 +45,7 @@
 		height:  100vh;
 		margin:  0;
 		box-sizing: border-box;
-		font-family:  Iosevka, monospace;
+		font-family:  "JetBrains Mono", monospace;
 		background-color:  var(--bg);
 		color:  var(--fg);
 	}
@@ -114,7 +119,8 @@
 	let drill = drills[index];
 
 	// Populate content
-	// document.querySelector("#index").innerText = "#000" + index;
+	document.querySelector("#index").innerText = index;
+	document.querySelector("#total").innerText = drills.length;
 	document.querySelector("#title").innerText = drill.title;
 	document.querySelector("#place").innerText = drill.place;
 	document.querySelector("#description").innerText = drill.description;
