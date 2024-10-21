@@ -4,126 +4,29 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Drill Get 🐐</title>
+	<link rel="stylesheet" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div class="preheader">
-			Drill <span id="index">X</span> of <span id="total">Y</span>
-		</div>
-		<h1 id="title">Drill Name</h1>
-	</header>
-	<figure></figure>
-	<article>
-		<p class="preheader">Where</p>	
-		<p id="place">Place</p>
-		<p class="preheader">What</p>
-		<p id="description">Description</p>	
-		<p class="preheader">Why</p>
-		<p id="goal">Goal</p>	
-	</article>
+	<main>
+		<header>
+			<div class="preheader">
+				Drill <span id="index">X</span> of <span id="total">Y</span>
+			</div>
+			<h1 id="title">Drill Name</h1>
+		</header>
+		<section id="mood"></section>
+		<article>
+			<p class="preheader">Where</p>	
+			<p id="place">Place</p>
+			<p class="preheader">What</p>
+			<p id="description">Description</p>	
+			<p class="preheader">Why</p>
+			<p id="goal">Goal</p>	
+		</article>
+	</main>
 </body>
-<style>
-	:root {
-		--fg:  #282828;
-		--bg:  white;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--fg:  white; 
-			--bg:  #282828;	
-		}
-	}
-
-	body {
-		display:  flex;
-		flex-direction: column;
-		justify-content: space-between;
-		height:  100vh;
-		margin:  0;
-		box-sizing: border-box;
-		font-family:  "JetBrains Mono", monospace;
-		background-color:  var(--bg);
-		color:  var(--fg);
-	}
-	h1 {
-		text-transform:  uppercase;
-	}
-	h1,h2,h3,h4,h5,h6, p {
-		font-size:  16px;
-		font-weight: 400;
-		margin:  0;
-	}
-	article, header {
-		border:  1px dashed var(--fg);
-		padding: 8px;
-		margin:  8px;
-		display:  flex;
-		flex-direction:  column;
-		gap:  8px;
-	}
-	.preheader {
-		opacity: .5;
-	}
-</style>
-<script type="text/javascript">
-	const drills = [
-	{
-		"title": "Hips to wall",
-		"place": "On flash grade problem.",
-		"description": "Between every move, touch the wall with your any hip. Position your body so the extra load is on your feet and core, not your remaining hand.",
-		"goal": "To efficiently move your weight close to the wall, helping you use your feet."
-	},
-	{
-		"title": "Feet forward",
-		"place": "On flash grade overhang wall",
-		"description": "Before you grab hold with your hand, you have to touch it with your foot.",
-		"goal": "Improve overhang mobility and body awareness."
-	},
-	{
-		"title": "Straight Arms",
-		"place": "On flash grade problem",
-		"description": "Climb using only straight arms. Twist your hips to inrease reach, and use your feet to push upward.",
-		"goal": "To use hip rotation to improve body positioning, and to use legs and feet (instead of arms) to initiate movements."
-	},
-	{
-		"title": "Hover hands",
-		"place": "On flash grade problem.",
-		"description": "Hover your hand above the next hold for 2 seconds before grabbing it. Use your feet and core to take the extra load.",
-		"goal": "Will improve positioning your body to find stable, static positions that allow your free hand to move.",
-	},
-	{
-		"title": "Silent feet",
-		"place": "Anywhere.",
-		"description": "Position your feet without making a sound.",
-		"goal": "Learning intentional foot placement, resulting in saved energy and avoided mistakes."
-	},
-	{
-		"title": "Single-touch hands",
-		"place": "Anywhere.",
-		"description": "Climb problems without ever adjusting your hand on a hold.",
-		"goal": "Learning intentional hand placement, activating your core and legs, resulting in saved energy and avoided mistakes."
-	},
-	{
-		"title": "Elimination round",
-		"place": "Flash grade problem.",
-		"description": "Climb problem – upon ascent, eliminate one hold. Repeat. Get out of your comfort zone.",
-		"goal": "Improve your ability to read a problem, by feeling impact of removing holds."
-	}
-	]
-
-	let index = Math.floor(Math.random() * drills.length);
-	let drill = drills[index];
-
-	// Populate content
-	document.querySelector("#index").innerText = index;
-	document.querySelector("#total").innerText = drills.length;
-	document.querySelector("#title").innerText = drill.title;
-	document.querySelector("#place").innerText = drill.place;
-	document.querySelector("#description").innerText = drill.description;
-	document.querySelector("#goal").innerText = drill.goal;
-</script>
+<script src="script.js"></script>
 </html>
